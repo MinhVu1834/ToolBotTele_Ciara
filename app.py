@@ -165,7 +165,7 @@ def ask_for_username(chat_id):
     try:
         bot.send_photo(
             chat_id,
-            "AgACAgUAAxkBAANmaUfIeixKIO_hfQEgSmEzevb-SlkAAlsLaxu3xUFW7nITr0-KXzEBAAMCAAN5AAM2BA",
+            "AgACAgUAAxkBAANPaU1CZB4slOCwLTrtoFeS4EuMG8gAAvcNaxu4D2hWXFTfCGtx7skBAAMCAAN5AAM2BA",
             caption=text,
             parse_mode="Markdown"
         )
