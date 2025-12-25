@@ -256,29 +256,29 @@ def handle_text(message):
   
 
 
-# ================== LẤY FILE_ID ẢNH (TẠM DÙNG ĐỂ LẤY ID) ==================
-# @bot.message_handler(content_types=['photo', 'document'])
-# def handle_receipt_media(message):
-#     chat_id = message.chat.id
+================== LẤY FILE_ID ẢNH (TẠM DÙNG ĐỂ LẤY ID) ==================
+@bot.message_handler(content_types=['photo', 'document'])
+def handle_receipt_media(message):
+    chat_id = message.chat.id
 
-#     if user_state.get(chat_id) != "WAITING_RECEIPT":
-#         return
+    if user_state.get(chat_id) != "WAITING_RECEIPT":
+        return
 
-#     if message.content_type == "photo":
-#         receipt_file_id = message.photo[-1].file_id
-#     else:  
-#         receipt_file_id = message.document.file_id
+    if message.content_type == "photo":
+        receipt_file_id = message.photo[-1].file_id
+    else:  
+        receipt_file_id = message.document.file_id
 
-#     user_state[chat_id] = {
-#         "state": "WAITING_GAME",
-#         "receipt_file_id": receipt_file_id
-#     }
+    user_state[chat_id] = {
+        "state": "WAITING_GAME",
+        "receipt_file_id": receipt_file_id
+    }
 
-#     bot.send_message(
-#         chat_id,
-#         "Mình muốn chơi *BCR - Thể Thao*, *Nổ hũ - Bắn Cá* hay *Game bài* ạ?",
-#         parse_mode="Markdown"
-#     )
+    bot.send_message(
+        chat_id,
+        "Mình muốn chơi *BCR - Thể Thao*, *Nổ hũ - Bắn Cá* hay *Game bài* ạ?",
+        parse_mode="Markdown"
+    )
 
 
 # ================== WEBHOOK FLASK ==================
